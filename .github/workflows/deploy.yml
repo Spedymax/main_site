@@ -1,0 +1,22 @@
+name: Deploy to Home Server
+
+on:
+  push:
+    branches:
+      - main  # или та ветка, из которой ты деплоишь
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Перейти в папку сайта
+        run: cd /srv/apps/main_site && git pull
+
+      - name: Проверить владельца и права (на всякий случай)
+        run: |
+          chown -R $USER:$USER /srv/apps/main_site
+          find /srv/apps/main_site -type d -exec chmod 755 {} \;
+          find /srv/apps/main_site -type f -exec chmod 644 {} \;
+
+      - name: Перезапустить Apache
+        run: sudo systemctl reload apache2
