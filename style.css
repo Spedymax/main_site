@@ -88,7 +88,7 @@ h1 {
 .card p {
     font-size: 0.95rem;
     margin-bottom: 15px;
-    color: #80ffc9;
+    color: #e0e0e0;
 }
 
 .card a {
@@ -117,8 +117,7 @@ a {
     font-size: 0.9rem;
     opacity: 0.8;
     text-align: center;
-    color: var(--accent-color);
-    text-shadow: 0 0 5px var(--accent-color);
+    color: #e0e0e0;
 }
 
 .decor {
