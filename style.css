@@ -143,6 +143,11 @@ a {
     left: -100px;
 }
 
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
 .decor.two {
     bottom: 5%;
     right: -100px;
